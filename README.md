@@ -1,3 +1,6 @@
+
+<!-- Link to project video -->
+
 # Project 3: Around The U.S.
 
 ### Overview  
