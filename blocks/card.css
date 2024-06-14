@@ -3,12 +3,14 @@
     flex-direction: column; 
     list-style: none;
     border-radius: 10px;
+    overflow: hidden;
 }
 
 .card__image {
+    object-fit: cover;
     width: 282px;
-    height: 361px;
-    
+    height: 282px;
+
 }
 
 .card__description {
@@ -24,19 +26,9 @@
 
 }
 
-.card__list {
-    display: grid;
-    justify-content: center;
-    grid-template-columns: repeat(auto-fit, 282px);
-    grid-gap: 20px 17px;
-    padding-left: 0;
-    margin: 0;
-    white-space: nowrap;
-    overflow: hidden;
-}
-
 .card__title {
     margin: 0;
+    max-width: 220px;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden; 
@@ -48,5 +40,12 @@
     width:  21px;
     height: 18px;
     border: none;
+    cursor: pointer;
     
 }   
+
+.card__like-button:hover {
+    color: #000;
+    opacity: 50%;
+}
+

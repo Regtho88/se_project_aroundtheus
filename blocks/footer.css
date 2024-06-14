@@ -1,7 +1,11 @@
 .footer {
-    width: 318px;
-    height: 18px;
+    width: 100%;
+    min-height: 18px;
     color: #545454;
     margin-left: 200px;
     margin-bottom: 60px;
+}
+
+.footer__copyright {
+    
 }

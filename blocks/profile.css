@@ -25,10 +25,13 @@
 }
 
 .profile__title {
+    /* width: 880px;
+    height: 120px; */
     font-size: 42px;
     line-height: 48px;
     font-weight: 500;
     grid-area: title;
+    
 }
 
 .profile__edit-button {
@@ -38,7 +41,13 @@
     width: 24px;
     align-self: center;
     grid-area: button;
+    cursor: pointer;
     
+}
+
+.profile__edit-button:hover {
+    color: #fff;
+    opacity: 60%;
 }
 
 .profile__add-button {
@@ -49,6 +58,12 @@
     line-height: 22px;
     font-weight: 400;
     margin-left: auto;
+    cursor: pointer;
+}
+
+.profile__add-button:hover {
+    color: #000;
+    opacity: 60%;
 }
 
 .profile__image {
@@ -60,6 +75,31 @@
     background-position: center; 
 }
 
+
+@media screen  and (max-width: 800px) {
+
+    .profile {
+       flex-direction: column;
+    }
+
+    .profile__info {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+       
+    }
+    .profile__description {
+        width: 100%;
+        text-align: center;
+    }
+    .profile__add-button {
+        margin: 0;
+        width: 100%;
+   
+    
+    }
+}
 
 @media screen and (max-width: 480px) {
     .profile {
@@ -90,46 +130,18 @@
         width: 100px;
     }
 
-@media screen  and (max-width: 800px) {
 
-    .profile {
-       flex-direction: column;
-    }
-
-    .profile__info {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        width: 100%;
-       
-    }
-    .profile__description {
-        width: 100%;
-        text-align: center;
-    }
-    .profile__add-button {
-        margin: 0;
-        width: 100%;
-   
-    
-    }
 }
 
 @media screen and (max-width: 320px) {
-    .page__section {
-        max-width: 100%;
-        padding: 0 10px; 
-    }
-
     .profile {
         flex-direction: column;
         align-items: center;
         gap: 20px; 
         padding-top: 20px; 
     }
-
+ 
     .profile__image {
-        width: 120px;
         height: 120px;
     }
 
@@ -160,11 +172,6 @@
         width: 100%;
         background-size: cover;
         margin-top: 10px; 
-    }
-
-    .card__list {
-        grid-template-columns: 1fr; 
-    
     }
 
 
