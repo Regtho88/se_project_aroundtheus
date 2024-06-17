@@ -1,4 +1,4 @@
-.footer {
+.footer__title {
     width: 100%;
     min-height: 18px;
     color: #545454;
@@ -6,6 +6,13 @@
     margin-bottom: 60px;
 }
 
-.footer__copyright {
-    
-}
+
+@media screen and (max-width: 720px) {
+    .footer__title {
+      margin: 48px auto 36px auto;
+      line-height: 16.94px;
+      font-size: 14px;
+    }
+
+}    
+
