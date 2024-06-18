@@ -45,7 +45,6 @@
 }   
 
 .card__like-button:hover {
-    color: #000;
     opacity: 50%;
 }
 
