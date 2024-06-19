@@ -1,8 +1,9 @@
 
-<!-- Link to project video below -->
+<!-- Link to Github & project video walkthrough below  -->
+
 https://drive.google.com/file/d/1meoERXvqq4axDXT4iOy3FpDAj0CPlkno/view?usp=sharing
 
-
+https://github.com/Regtho88/se_project_aroundtheus.git
 
 
 Project 3: Around The U.S.
@@ -12,7 +13,6 @@ Overview
 A brief overview of what the purpose of this project is
 Description of technologies used to create this project
 How I think this project could be improved
-Github pages live website of project
 
 Intro This project is called "Around The U.S." This is a website for explorers to post photos from their adventures.
 
