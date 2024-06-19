@@ -1,9 +1,6 @@
 
-<!-- Link to Github & project video walkthrough below  -->
 
-https://drive.google.com/file/d/1meoERXvqq4axDXT4iOy3FpDAj0CPlkno/view?usp=sharing
 
-https://github.com/Regtho88/se_project_aroundtheus.git
 
 
 Project 3: Around The U.S.
@@ -27,6 +24,13 @@ CSS: Used to define the specific styles for the webpage and also to make the web
 Github: To deploy my code and store the working and completed project from VScode
 Figma: Provided an overview of the webpage design and the specifications needed for this project
 Ideas For Improvement I think this project could best be improved by adding a feature for users to customize the way their profile looks therefore creating more individuality and also creating a design for this webpage that is more fitting for what the purpose. It's about social connection between outdoor adventures and the design right now is very black, industrial, and unwelcoming to use. I would improve this by putting thought into the design of the webpage based on it's purpose and the types of users it's trying to appeal to.
+
+
+# Link to walkthrough 
+
+https://drive.google.com/file/d/1meoERXvqq4axDXT4iOy3FpDAj0CPlkno/view?usp=sharing
+
+# Link to Github Pages
 
 
 # Project 3: Around The U.S.
