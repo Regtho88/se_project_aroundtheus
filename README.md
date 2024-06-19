@@ -31,6 +31,7 @@ Ideas For Improvement I think this project could best be improved by adding a fe
 https://drive.google.com/file/d/1meoERXvqq4axDXT4iOy3FpDAj0CPlkno/view?usp=sharing
 
 # Link to Github Pages
+https://regtho88.github.io/se_project_aroundtheus/
 
 
 # Project 3: Around The U.S.
