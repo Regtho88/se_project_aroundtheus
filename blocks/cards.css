@@ -17,4 +17,9 @@
     .card__list {
     grid-template-columns: 1fr; 
     }
+
+    .cards {
+        padding-top: 36px;
+    }
+ 
 }

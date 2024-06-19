@@ -16,6 +16,15 @@
   margin: 0;
 }
 
+@media screen and (max-width: 633px) {
+  .footer {
+    margin: 48px 19px 36px;
+    max-width: 282px;
+    padding: 0;
+  }
+}
+
+
 @media screen and (max-width: 320px) {
   .footer {
     margin: 0;
