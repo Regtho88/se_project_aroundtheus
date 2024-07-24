@@ -52,6 +52,54 @@ profileCloseModal.addEventListener('click', () => {
 });
 
 
+*-----------------------------------------------------------------*/
+/*                           Functions                             */
+/*-----------------------------------------------------------------*/
+function closePopup() {
+  profileEditModal.classList.remove('modal_opened');
+}
+
+
+function getCardElement (data) {
+  const cardImageTem = cardElement.querySelector('.card__image');
+  const cardTitleTem = cardElement.querySelector('.card__description');
+  cardTitleTem.textContent = data.name;
+  cardImageTem.src = data.link;
+  cardTitleTem.alt = data.name;
+  return cardElement;
+}
+
+/*-----------------------------------------------------------------*/
+/*                         Event Handlers                          */
+/*-----------------------------------------------------------------*/
+
+function handleProfileFormSubmit(evt) {
+  evt.preventDefault();
+  profileName.textContent = nameInput.value;
+  profileJob.textContent = jobInput.value;
+  closePopup();
+}
+/*-----------------------------------------------------------------*/
+/*                         Event Listeners                         */
+/*-----------------------------------------------------------------*/
+buttonEdit.addEventListener('click', function () {
+  profileEditModal.classList.add('modal_opened');
+});
+
+closeEditForm.addEventListener('click', function () {
+  closePopup();
+});
+
+profileFormElement.addEventListener('submit', handleProfileFormSubmit);
+
+
+for (let i = 0; i <= initialCards.length; i++) {
+  const card = initialCards[i];
+  const cardElement = getCardElement(data);
+  // const cardListTem = document.querySelector('.cards__list');
+  cardListTem.prepend(cardElement);
+}
+
 
 
 
