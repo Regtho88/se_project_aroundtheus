@@ -31,13 +31,17 @@ const closeEditForm = document.querySelector('#close-edit-btn');
 
 const profileFormElement = profileEditModal.querySelector('.modal__form');
 
-const nameInput = document.querySelector('.modal__heading');
-const jobInput = document.querySelector('.modal__description');
 
-const profileName = document.querySelector('#profile_name');
-const profileJob = document.querySelector('#profile_job');
-const cardTemplate = document.querySelector('#card-template').content;
-const cardElement = cardTemplate.querySelector('.card').cloneNode(true);
+const nameInput =  profileEditModal.querySelector('.modal__heading');
+const jobInput =  profileEditModal.querySelector('.modal__description');
+
+const profileName = document.querySelector('.profile__title');
+const profileJob = document.querySelector('.profile__description');
+
+
+
+const cardTemplate = document.querySelector('#card-template').content.querySelector(".card");
+const cardElement = cardTemplate.cloneNode(true);
 const cardContainter = document.querySelector('.cards__list');
 /*-----------------------------------------------------------------*/
 /*                           Functions                             */
@@ -59,6 +63,9 @@ function getCardElement (data) {
 /*-----------------------------------------------------------------*/
 /*                         Event Handlers                          */
 /*-----------------------------------------------------------------*/
+buttonEdit.addEventListener('click', function () {
+  profileEditModal.classList.add('modal_opened');
+});
 
 function handleProfileFormSubmit(evt) {
   evt.preventDefault();
@@ -69,9 +76,7 @@ function handleProfileFormSubmit(evt) {
 /*-----------------------------------------------------------------*/
 /*                         Event Listeners                         */
 /*-----------------------------------------------------------------*/
-buttonEdit.addEventListener('click', function () {
-  profileEditModal.classList.add('modal_opened');
-});
+
 
 closeEditForm.addEventListener('click', function () {
   closePopup();
