@@ -25,24 +25,26 @@ const initialCards = [
     },
 ];
 
+
+/*-----------------------------------------------------------------*/
+/*                            Elements                             */
+/*-----------------------------------------------------------------*/
 const buttonEdit = document.querySelector('#js-edit-button');
 const profileEditModal = document.querySelector('#profile-edit-modal');
 const closeEditForm = document.querySelector('#close-edit-btn');
 
 const profileFormElement = profileEditModal.querySelector('.modal__form');
 
+const nameInput = document.querySelector('.modal__heading');
+const jobInput = document.querySelector('.modal__description');
 
-const nameInput =  profileEditModal.querySelector('.modal__heading');
-const jobInput =  profileEditModal.querySelector('.modal__description');
+const profileName = document.querySelector('#profile_name');
+const profileJob = document.querySelector('#profile_job');
+const cardTemplate = document.querySelector('#card-template').content;
+const cardElement = cardTemplate.querySelector('.card').cloneNode(true);
+const cardContainer = document.querySelector('.cards__list');
 
-const profileName = document.querySelector('.profile__title');
-const profileJob = document.querySelector('.profile__description');
 
-
-
-const cardTemplate = document.querySelector('#card-template').content.querySelector(".card");
-const cardElement = cardTemplate.cloneNode(true);
-const cardContainter = document.querySelector('.cards__list');
 /*-----------------------------------------------------------------*/
 /*                           Functions                             */
 /*-----------------------------------------------------------------*/
@@ -51,21 +53,22 @@ function closePopup() {
 }
 
 
-function getCardElement (data) {
-  const cardImageTem = cardElement.querySelector('.card__image');
-  const cardTitleTem = cardElement.querySelector('.card__description');
-  cardTitleTem.textContent = data.name;
-  cardImageTem.src = data.link;
-  cardTitleTem.alt = data.name;
+function getCardElement (cardData) {
+    const cardElement = cardTemplate.cloneNode(true); // Clone the template
+    const cardTitleTem = cardElement.querySelector('.card__title'); // Select title element
+    const cardImageTem = cardElement.querySelector('.card__image'); // Select image element
+    
+
+    cardTitleTem.textContent = cardData.name; 
+    cardImageTem.src = cardData.link; 
+    cardImageTem.alt = cardData.name; // Optionally, set an alt attribute for accessibility
+
   return cardElement;
 }
 
 /*-----------------------------------------------------------------*/
 /*                         Event Handlers                          */
 /*-----------------------------------------------------------------*/
-buttonEdit.addEventListener('click', function () {
-  profileEditModal.classList.add('modal_opened');
-});
 
 function handleProfileFormSubmit(evt) {
   evt.preventDefault();
@@ -76,7 +79,9 @@ function handleProfileFormSubmit(evt) {
 /*-----------------------------------------------------------------*/
 /*                         Event Listeners                         */
 /*-----------------------------------------------------------------*/
-
+buttonEdit.addEventListener('click', function () {
+  profileEditModal.classList.add('modal_opened');
+});
 
 closeEditForm.addEventListener('click', function () {
   closePopup();
@@ -85,9 +90,19 @@ closeEditForm.addEventListener('click', function () {
 profileFormElement.addEventListener('submit', handleProfileFormSubmit);
 
 
-function getCardElement(data) {
-  console.log(data);
-  const cardElement = cardTemplate.content
-    .querySelector(".card")
-    .cloneNode(true);
-}
+initialCards.forEach((cardData) => {
+    const cardElement = getCardElement(cardData);
+    // Append the card to a container element in the DOM
+    cardContainer.appendChild(cardElement);
+});
+
+
+
+//clone the template element with all its content and store it in a cardElement variable
+//access the card title and image and store them in variables
+//set the path to the image to the link field of the object
+//set the image alt text to the name field of the object
+//set the card title to the name field of the object, too
+//return the ready HTML element with the filled-in data
+
+
