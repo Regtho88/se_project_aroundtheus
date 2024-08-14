@@ -62,7 +62,7 @@
   padding: 0 36px;
 }
 
-.modal__heading {
+.modal__form .modal__input:first-of-type {
   margin-bottom: 29.74px;
   border-bottom: 1px solid rgb(0, 0, 0, .20);
   border-right: none;
@@ -70,22 +70,26 @@
   border-top: none;
 }
 
-.modal__heading::placeholder {
+
+.modal__form .modal__input:last-of-type {
+  margin-bottom: 48px;
+    border-bottom: 1px solid rgb(0, 0, 0, .20);
+    border-right: none;
+    border-left: none;
+    border-top: none;
+}
+
+
+.modal__form .modal__input:first-of-type::placeholder {
   color: #000;
   font-size: 14px;
   font-weight: 400;
   line-height: 16.94px;
 }
 
-.modal__description {
-    margin-bottom: 48px;
-    border-bottom: 1px solid rgb(0, 0, 0, .20);
-    border-right: none;
-    border-left: none;
-    border-top: none;
-  }
 
-  .modal__description::placeholder {
+
+.modal__form .modal__input:last-of-type::placeholder {
     color: #000;
     font-size: 14px;
     font-weight: 400;
