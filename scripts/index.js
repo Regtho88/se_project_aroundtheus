@@ -35,14 +35,18 @@ const closeEditForm = document.querySelector('#close-edit-btn');
 
 const profileFormElement = profileEditModal.querySelector('.modal__form');
 
-const nameInput = document.querySelector('.modal__input');
-const jobInput = document.querySelector('.modal__input');
+const nameInput = document.querySelector('#title-input');
+const jobInput = document.querySelector('#job-input');
+
 
 const profileName = document.querySelector('#profile_name');
 const profileJob = document.querySelector('#profile_job');
 const cardTemplate = document.querySelector('#card-template').content;
 const cardElement = cardTemplate.querySelector('.card').cloneNode(true);
 const cardContainer = document.querySelector('.cards__list');
+
+
+
 
 
 /*-----------------------------------------------------------------*/
@@ -80,7 +84,11 @@ function handleProfileFormSubmit(evt) {
 /*                         Event Listeners                         */
 /*-----------------------------------------------------------------*/
 buttonEdit.addEventListener('click', function () {
+  jobInput.value = profileJob.textContent;
+  nameInput.value = profileName.textContent;
+
   profileEditModal.classList.add('modal_opened');
+
 });
 
 closeEditForm.addEventListener('click', function () {
@@ -106,24 +114,13 @@ initialCards.forEach((cardData) => {
 //return the ready HTML element with the filled-in data
 
 
-document.addEventListener("DOMContentLoaded", function() {
-  // Select all inputs with the class 'modal__input'
-  const inputs = document.querySelectorAll('.modal__input');
-
-  // Example: Log the name attribute of each input
-  inputs.forEach(input => {
-      console.log(input.getAttribute('name'));
-  });
 
   // Example: Select the first and last inputs based on their position
-  const firstInput = inputs[0]; // First input
-  const lastInput = inputs[inputs.length - 1]; // Last input
+  // const firstInput = inputs[0]; // First input
+  // const lastInput = inputs[inputs.length - 1]; // Last input
 
   // Additional example: Add custom data attributes to the first and last input
-  firstInput.dataset.style = 'first';
-  lastInput.dataset.style = 'last';
+  // firstInput.dataset.style = 'first';
+  // lastInput.dataset.style = 'last';
 
-  // Example: Change styles via JavaScript if needed
-  firstInput.style.borderColor = '1px solid rgb(0, 0, 0, .20)'; // Example styling
-  lastInput.style.borderColor = '1px solid rgb(0, 0, 0, .20)'; // Example styling
-});
+  
