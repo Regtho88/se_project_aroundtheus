@@ -29,77 +29,10 @@
               ></button>
               <p class="profile__description" id="profile_job">Explorer</p>
             </div>
-                <button class="profile__add-button" type="button"></button>
+                <button class="profile__add-button" type="button" id="add-card-button"></button>
               </section>
               <section class="cards page__section">
                 <ul class="cards__list">
-      
-                   <!-- <li class="card">
-                    <img
-                      src="./images/yosemite-v.jpg"
-                      alt="Yosemite Valley"
-                      class="card__image"
-                    />
-                    <div class="card__description">
-                      <h2 class="card__header">Yosemite Valley</h2>
-                      <button class="card__like-button" type="button"></button>
-                    </div>
-                  </li>
-                  <li class="card">
-                    <img
-                      src="./images/lake-louise.jpg"
-                      alt="Lakes Louise"
-                      class="card__image"
-                    />
-                    <div class="card__description">
-                      <h2 class="card__header">Lake Louise</h2>
-                      <button class="card__like-button" type="button"></button>
-                    </div>
-                  </li>
-                  <li class="card">
-                    <img
-                      src="./images/bald-mountains.jpg"
-                      alt="Bald Mountains"
-                      class="card__image"
-                    />
-                    <div class="card__description">
-                      <h2 class="card__header">Bald Mountains</h2>
-                      <button class="card__like-button" type="button"></button>
-                    </div>
-                  </li>
-                  <li class="card">
-                    <img
-                      src="./images/latemar.jpg"
-                      alt="Latemar"
-                      class="card__image"
-                    />
-                    <div class="card__description">
-                      <h2 class="card__header">Latemar</h2>
-                      <button class="card__like-button" type="button"></button>
-                    </div>
-                  </li>
-                  <li class="card">
-                    <img
-                      src="./images/vanoise-national-park.jpg"
-                      alt="Vanoise National Park"
-                      class="card__image"
-                    />
-                    <div class="card__description">
-                      <h2 class="card__header">Vanoise National Park</h2>
-                      <button class="card__like-button" type="button"></button>
-                    </div>
-                  </li>
-                  <li class="card">
-                    <img
-                      src="./images/lago-di-braies.jpg"
-                      alt="Lago di Braies"
-                      class="card__image"
-                    />
-                    <div class="card__description">
-                      <h2 class="card__header">Lago di Braies</h2>
-                      <button class="card__like-button" type="button"></button>
-                    </div>
-                  </li>  -->
                 </ul>
               </section>
 
@@ -130,16 +63,53 @@
         </form>
       </div>
     </div>
+
+   <!-- Add New Card -->
+   <div class="modal" id="add-card-modal">
+    <div class="modal__container">
+      <button class="modal__close" id="close-add-btn" type="button"></button>
+      <p class="modal__title">New Place</p>
+      <form class="modal__form">
+        <input
+          type="text"
+          id="title-input"
+          name="title"
+          class="modal__input"
+          placeholder="Title"
+        />
+        <input
+          type="text" id="job-input"
+          name="description"
+          class="modal__input"
+          placeholder="Image URL"
+        />
+        <button type="submit" class="modal__button">Save</button>
+      </form>
+    </div>
+   </div>
+    
     <template id="card-template">
       <li class="card">
         <img class="card__image" src="" alt="" />
+        <button class="card__trash-button" type="button"></button> 
         <div class="card__description">
           <h2 class="card__title"></h2>
           <button class="card__like-button" type="button"></button>
         </div>
       </li>
     </template>
+   
     <script src="./scripts/index.js"></script>
+    <!-- Image Preview Modal -->
+<div class="modal" id="image-modal">
+  <div class="modal__container modal__container_type_image">
+    <button class="modal__close" id="close-image-btn" type="button"></button>
+    <img class="modal__image" src="" alt="Enlarged photo" />
+    <p class="modal__caption"></p>
+  </div>
+</div>
+
  </body>
 </html>
 
+<!-- <button class="card__trash-button" type="button"></button> -->x

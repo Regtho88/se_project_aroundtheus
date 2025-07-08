@@ -14,7 +14,7 @@
 
 
 @media screen and (max-width: 320px) {
-    .card__list {
+    .cards__list {
     grid-template-columns: 1fr; 
     }
 
