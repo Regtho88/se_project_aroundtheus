@@ -1,115 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta content="ie=edge" http-equiv="X-UA-Compatible" />
     <title>Around the U.S.</title>
-    <link href="pages/index.css" rel="stylesheet">
+    <link href="pages/index.css" rel="stylesheet" />
   </head>
- <body class="page">
+  <body class="page">
     <div class="page__content">
-        <header class="header page__section">
-        <img class="header__logo" src="./images/Vector1.svg" alt="Around the U.S. Logo"
-        />
-        </header>
-        <main class="content">
-            <section class="profile page__section">
-              <img
-              src="./images/jacques-cousteau.jpg"
-              alt="Jacques Profile Photo"
-              class="profile__image"
-            />
-            <div class="profile__info">
-              <h1 class="profile__title" id="profile_name">Jacques Cousteau</h1>
-              <button
-                type="button"
-                aria-label="edit"
-                class="profile__edit-button" id="js-edit-button"
-              ></button>
-              <p class="profile__description" id="profile_job">Explorer</p>
-            </div>
-                <button class="profile__add-button" type="button" id="add-card-button"></button>
-              </section>
-              <section class="cards page__section">
-                <ul class="cards__list">
-                </ul>
-              </section>
+      <header class="header page__section">
+        <img class="header__logo" src="./images/Vector1.svg" alt="Around the U.S. Logo" />
+      </header>
 
-        </main>
-        <footer class="footer">
-          <p class="footer__title">©️ 2024 Around The U.S.</p>
-        </footer>
+      <main class="content">
+        <section class="profile page__section">
+          <img src="./images/jacques-cousteau.jpg" alt="Jacques Profile Photo" class="profile__image" />
+          <div class="profile__info">
+            <h1 class="profile__title" id="profile_name">Jacques Cousteau</h1>
+            <button
+              type="button"
+              aria-label="edit"
+              class="profile__edit-button"
+              id="js-edit-button"
+            ></button>
+            <p class="profile__description" id="profile_job">Explorer</p>
+          </div>
+          <button class="profile__add-button" type="button" id="add-card-button"></button>
+        </section>
+
+        <section class="cards page__section">
+          <ul class="cards__list"></ul>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <p class="footer__title">©️ 2024 Around The U.S.</p>
+      </footer>
     </div>
+
+    <!-- Profile Edit Modal -->
     <div class="modal" id="profile-edit-modal">
       <div class="modal__container">
         <button class="modal__close" id="close-edit-btn" type="button"></button>
         <p class="modal__title">Edit Profile</p>
         <form class="modal__form">
-          <input
-            type="text"
-            id="title-input"
-            name="title"
-            class="modal__input"
-            placeholder="name"
-          />
-          <input
-            type="text" id="job-input"
-            name="description"
-            class="modal__input"
-            placeholder="description"
-          />
+          <input type="text" id="title-input" name="title" class="modal__input" placeholder="name" />
+          <input type="text" id="job-input" name="description" class="modal__input" placeholder="description" />
           <button type="submit" class="modal__button">Save</button>
         </form>
       </div>
     </div>
 
-   <!-- Add New Card -->
-   <div class="modal" id="add-card-modal">
-    <div class="modal__container">
-      <button class="modal__close" id="close-add-btn" type="button"></button>
-      <p class="modal__title">New Place</p>
-      <form class="modal__form">
-        <input
-          type="text"
-          id="title-input"
-          name="title"
-          class="modal__input"
-          placeholder="Title"
-        />
-        <input
-          type="text" id="job-input"
-          name="description"
-          class="modal__input"
-          placeholder="Image URL"
-        />
-        <button type="submit" class="modal__button">Save</button>
-      </form>
+    <!-- Add New Card Modal -->
+    <div class="modal" id="add-card-modal">
+      <div class="modal__container">
+        <button class="modal__close" id="close-add-btn" type="button"></button>
+        <p class="modal__title">New Place</p>
+        <form class="modal__form" id="add-card-form">
+          <input type="text" id="title-input" name="title" class="modal__input" placeholder="Title" />
+          <input type="text" id="job-input" name="description" class="modal__input" placeholder="Image URL" />
+          <button type="submit" class="modal__button">Save</button>
+        </form>
+      </div>
     </div>
-   </div>
-    
+
+    <!-- Card Template -->
     <template id="card-template">
       <li class="card">
         <img class="card__image" src="" alt="" />
-        <button class="card__trash-button" type="button"></button> 
+        <button class="card__trash-button" type="button"></button>
         <div class="card__description">
           <h2 class="card__title"></h2>
           <button class="card__like-button" type="button"></button>
         </div>
       </li>
     </template>
-   
-    <script src="./scripts/index.js"></script>
+
     <!-- Image Preview Modal -->
-<div class="modal" id="image-modal">
-  <div class="modal__container modal__container_type_image">
-    <button class="modal__close" id="close-image-btn" type="button"></button>
-    <img class="modal__image" src="" alt="Enlarged photo" />
-    <p class="modal__caption"></p>
-  </div>
-</div>
+    <div class="modal modal_type_image" id="image-modal">
+      <div class="modal__container modal__container_type_image">
+        <button id="close-image-btn" type="button"></button>
+        <img class="modal__image" src="" alt="Enlarged photo" />
+        <p class="modal__caption"></p>
+      </div>
+    </div>
 
- </body>
+    <script src="./scripts/index.js"></script>
+  </body>
 </html>
-
-<!-- <button class="card__trash-button" type="button"></button> -->x
