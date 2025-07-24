@@ -8,15 +8,19 @@
   z-index: 999;
   padding-left: 19px;
   padding-right: 19px; 
-  display: none;   
+  display: flex;   
   pointer-events: none;
-  transition: opacity 0.4s ease;
- 
+  transition: visibility 0s 0.6s, opacity 0.6s;
+  visibility: hidden;
+  opacity: 0;
 }
 
 .modal_opened {
   display: flex;
   pointer-events: auto;
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0s, opacity 0.6;
 
 }
 
@@ -160,7 +164,8 @@
   right: 0;
   bottom: 0;
   z-index: 999;
-  padding: 0 19px
+  padding: 0 19px;
+  transition: visibility 0s, opacity 0.6;
 }
 
 .modal_type_image.modal_opened {
@@ -183,7 +188,7 @@
   max-height: 85vh;
   position: relative;
   transform: scale(0.95);
-  transition: opacity 0.4s ease 0.2s, t
+  /* transition:visibility 0s, opacity 0.6; */
 
 }
 
@@ -195,19 +200,9 @@
   max-width: 100%;
   max-height: 65vh;  /* ⬅️ reduced from 75vh */
   object-fit: contain;
+  transition:visibility 0s, opacity 0.6;
+
   
 }
 
-#close-image-btn {
-  position: absolute;
-  top: -40px;
-  right: -40px;
-  width: 40px;
-  height: 40px;
-  background-image: url(../images/close-button.svg);
-  background-color: transparent;
-  background-repeat: no-repeat;
-  border: none;
-  cursor: pointer;
-}
-
+ 

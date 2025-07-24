@@ -64,7 +64,7 @@
     opacity: 1;
   }
   
-  .card__like-button:active:hover {
+  .card__like-button:hover:active{
     opacity: 0.4;
   }
 
@@ -84,5 +84,6 @@
 
 }
 
-
-
+.card__trash-button:hover {
+    opacity: 0.6;
+}
